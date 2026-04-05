@@ -1,0 +1,24 @@
+[package]
+name = "xlock"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "x-lock bot protection middleware for Rust"
+repository = "https://github.com/x-lock-dev/xlock-rust"
+homepage = "https://x-lock.dev"
+keywords = ["xlock", "bot-protection", "captcha", "middleware", "actix"]
+categories = ["web-programming", "authentication"]
+readme = "README.md"
+
+[features]
+default = ["actix"]
+actix = ["dep:actix-web", "dep:futures"]
+
+[dependencies]
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["rt"] }
+
+actix-web = { version = "4", optional = true }
+futures = { version = "0.3", optional = true }
