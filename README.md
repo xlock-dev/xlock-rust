@@ -65,7 +65,7 @@ async fn check_token(token: &str) {
 | Field | Default | Description |
 |---|---|---|
 | `site_key` | `$XLOCK_SITE_KEY` | Your x-lock site key |
-| `api_url` | `https://api.x-lock.cloud` | API base URL |
+| `api_url` | `https://api.x-lock.dev` | API base URL |
 | `fail_open` | `true` | Allow requests through on verification errors |
 | `protected_paths` | `[]` | Path prefixes to protect (empty = all POSTs) |
 
